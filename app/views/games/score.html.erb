@@ -1,0 +1,23 @@
+<%= @included %>
+<% if @included %>
+  <% if @english_word %>
+     <p><%="Congratulations! #{@word} is a valid English word!" %></p>
+  <% else %>
+    <p><%="Sorry but #{params[:word]} does not seem to be a valid English word..." %></p>
+  <% end %>
+<% else %>
+  <p><%="Sorry but #{params[:word]} can't be built out of" %></p><%= @letters %>
+<% end %>
+
+
+
+
+  <%# <%  if
+    if included? == true
+      @congrats = "you win!"
+    end
+
+     # word must be an english word
+   elsif
+     @congrats = "Sorry but #{params[:word]} does not seem to be a valid English word..."
+   else @congrats = "Sorry but #{params[:word]} can't be built out of #{params[:letters]}" %>
